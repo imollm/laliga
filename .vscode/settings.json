@@ -1,0 +1,10 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.(ts|js)$",
+        "cmd": "cd ~/Dev/laliga && npm run build"
+      }
+    ]
+  }
+}
