@@ -5,16 +5,12 @@ import useStore from '../store/index.js';
 import { MenuOption, IMenu } from '../types/index.js';
 
 const Menu = () => {
-    const { setOptionChoosed, fetchPlayersData } = useStore();
+    const { setOptionChoosed } = useStore();
 
     const handeOnChange = (e: EventTarget) => {
         const { value } = e as HTMLInputElement;
         setOptionChoosed(value as MenuOption);
     };
-
-    useEffect(() => {
-        (async () => fetchPlayersData())();
-    }, []);
 
     return (
         <div className={styles.select} tabIndex={1}>

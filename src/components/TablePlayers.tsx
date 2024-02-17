@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IPlayerData } from '../models/repositories/Repository.js';
 import useStore from '../store/index.ts';
 
 const TablePlayers = () => {
-    const { playersData } = useStore();
+    const { playersData, fetchPlayersData } = useStore();
+
+    useEffect(() => {
+        const fetchData = async () => await fetchPlayersData();
+        fetchData();
+    }, []);
 
     return (
         <div>

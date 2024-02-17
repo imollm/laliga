@@ -22,6 +22,6 @@ export type IPlayersData = {
 export type IStore = {
   optionChoosed: MenuOption;
   setOptionChoosed: (option: MenuOption) => void;
-  playersData: Array<IPlayersData> | undefined;
+  playersData: Array<IPlayersData>;
   fetchPlayersData: () => void;
 }

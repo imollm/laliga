@@ -9,8 +9,8 @@ const useStore = create<IStore>((set: any, get: any) => ({
   fetchPlayersData: async () => {
     if (get().playersData.length === 0) {
       try {
-        const data = await fetch('/players.json');
-        set({ data });
+        const playersData = await fetch('/players.json');
+        set({ playersData: await playersData.json() });
       } catch (error) {
         console.error('Error fetching data:', error);
       }
