@@ -5,7 +5,7 @@ import mvpIcon from "/src/mvp.png";
 
 const PlayerCard = ({ player }: { player: IPlayersData }) => {
     return (
-        <div key={player.id} className={`relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}>
+        <div key={player.id} className={`relative w-full rounded-lg shadow bg-gray-800 border-gray-700`}>
             {
                 player.isMVP && (
                     <figure className="absolute top-2 right-3">
