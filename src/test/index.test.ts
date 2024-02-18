@@ -10,6 +10,7 @@ import { IRound, Round } from '../models/Round.ts';
 import { IMatch, Match } from '../models/Match.ts';
 import { Team } from '../models/Team.ts';
 import { ISet, SetGame } from '../models/Set.ts';
+import { IPlayerData } from '../models/repositories/Repository.js';
 require('dotenv').config();
 
 const notionService = new NotionService();
@@ -104,7 +105,17 @@ describe('NotionRepository tests', () => {
         expect(typeof response[i].gamesWon).toBe('number');
       }
     });
-  });
+
+    test('should have a MVP player', async () => {
+      const response = await notionRepository.getPlayersData();
+      expect(response.length).toBeGreaterThan(0);
+      for (let i = 0; i < response.length; i++) {
+        expect(response[i]).toHaveProperty('isMVP');
+        expect(typeof response[i].isMVP).toBe('boolean');
+      }
+      expect(response.filter((player: IPlayerData) => player.isMVP).length).toBe(1);
+    });
+  }); 
 });
 
 describe('League model tests', () => {
