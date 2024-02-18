@@ -1,6 +1,8 @@
 import { expect, test, describe, beforeAll } from 'vitest';
 import NotionService from '../models/services/NotionService.ts';
 import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints.js';
+import NotionRepository, { NotionResultArray } from '../models/repositories/NotionRepository.ts';
+import * as localNotionDatabse from './db.notion.json';
 import Player, { IPlayer } from '../models/Player.ts';
 import { League } from '../models/League.ts';
 import { Day, IDay } from '../models/Day.ts';
@@ -11,6 +13,7 @@ import { ISet, SetGame } from '../models/Set.ts';
 require('dotenv').config();
 
 const notionService = new NotionService();
+const notionRepository = new NotionRepository();
 let fetchDataBaseInfoResponse: QueryDatabaseResponse;
 let fetchAllDatabaseRowsResponse: QueryDatabaseResponse;
 
@@ -19,6 +22,8 @@ beforeAll(async () => {
   notionService.databaseId = process.env.NOTION_MATCHES_DATABASE_ID as string;
   fetchDataBaseInfoResponse = await notionService.fetchDataBaseInfo();
   fetchAllDatabaseRowsResponse = await notionService.fetchAllDatabaseRows();
+
+  notionRepository.results = fetchAllDatabaseRowsResponse.results;
 });
 
 describe('NotionService tests', () => {
@@ -51,6 +56,53 @@ describe('NotionService tests', () => {
     test('should return a response body with a property named "results" with a length greater than 0', async () => {
       expect(fetchAllDatabaseRowsResponse).toHaveProperty('results');
       expect(fetchAllDatabaseRowsResponse.results.length).toBeGreaterThan(0);
+    });
+  });
+});
+
+describe('NotionRepository tests', () => {
+  describe('NotionRepository::getPlayersData', () => {
+    test('should return non empty response body', async () => {
+      notionRepository.results = localNotionDatabse.default.results as NotionResultArray;
+      expect(typeof notionRepository.results).toBe('object');
+
+      const response = await notionRepository.getPlayersData();
+      expect(response).not.toBe(undefined);
+      expect(response).not.toBe(null);
+      expect(response).not.toBe('');
+      expect(response).not.toBe({});
+      expect(response).not.toBe([]);
+      expect(typeof response).toBe('object');
+    });
+    
+    test('should return a response body with a property named "results" with a length greater than 0', async () => {
+      const response = await notionRepository.getPlayersData();
+      expect(response.length).toBeGreaterThan(0);
+    });
+
+    test('should return a response body with an array of players and its data', async () => {
+      const response = await notionRepository.getPlayersData();
+      expect(response.length).toBeGreaterThan(0);
+      for (let i = 0; i < response.length; i++) {
+        expect(response[i]).toHaveProperty('id');
+        expect(typeof response[i].id).toBe('string');
+        expect(response[i]).toHaveProperty('name');
+        expect(typeof response[i].name).toBe('string');
+        expect(response[i]).toHaveProperty('position');
+        expect(typeof response[i].position).toBe('string');
+        expect(response[i]).toHaveProperty('matchesPlayed');
+        expect(typeof response[i].matchesPlayed).toBe('number');
+        expect(response[i]).toHaveProperty('matchesWon');
+        expect(typeof response[i].matchesWon).toBe('number');
+        expect(response[i]).toHaveProperty('matchesLost');
+        expect(typeof response[i].matchesLost).toBe('number');
+        expect(response[i]).toHaveProperty('setsWon');
+        expect(typeof response[i].setsWon).toBe('number');
+        expect(response[i]).toHaveProperty('setsLost');
+        expect(typeof response[i].setsLost).toBe('number');
+        expect(response[i]).toHaveProperty('gamesWon');
+        expect(typeof response[i].gamesWon).toBe('number');
+      }
     });
   });
 });
