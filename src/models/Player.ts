@@ -151,7 +151,8 @@ class Player implements IPlayer {
             matchesLost: this.matchesLost,
             setsWon: this.setsWon,
             setsLost: this.setsLost,
-            gamesWon: this.gamesWon
+            gamesWon: this.gamesWon,
+            isMVP: this.isMVP
         }
     }
 }

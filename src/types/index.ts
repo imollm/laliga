@@ -17,6 +17,7 @@ export type IPlayersData = {
   setsWon: number;
   setsLost: number;
   gamesWon: number;
+  isMVP: boolean;
 };
 
 export type IStore = {

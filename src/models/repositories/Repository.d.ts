@@ -18,4 +18,5 @@ export interface IPlayerData {
     setsWon: number;
     setsLost: number;
     gamesWon: number;
+    isMVP: boolean;
 }

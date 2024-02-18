@@ -6,9 +6,13 @@ import mvpIcon from "/src/mvp.png";
 const PlayerCard = ({ player }: { player: IPlayersData }) => {
     return (
         <div key={player.id} className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <figure className="w-full flex justify-center pt-4">
-                <img src={mvpIcon.src} alt="MVP icon" />
-            </figure>
+            {
+                player.isMVP && (
+                    <figure className="w-full flex justify-center pt-4">
+                        <img src={mvpIcon.src} alt="MVP icon" />
+                    </figure>
+                )
+            }
             <div className="flex flex-col items-center pt-8 pb-10">
                 <figure className="m-0 p-0 w-20">
                     <UserIcon />

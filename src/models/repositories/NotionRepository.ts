@@ -66,6 +66,33 @@ class NotionRepository implements INotionRepository {
     }
 
     /**
+     * Set the MVP of the league
+     * @returns void
+     */
+    setMVP = (): void => {
+        const mvp = this.league?.getPlayers().reduce((prevMVP: Player | undefined, currentPlayer: Player) => {
+            if (!prevMVP) { return currentPlayer; }
+            if (currentPlayer.getMatchesWon() > prevMVP.getMatchesWon()) {
+                return currentPlayer;
+            }
+            if (currentPlayer.getMatchesWon() === prevMVP.getMatchesWon()) {
+                if (currentPlayer.getSetsWon() > prevMVP.getSetsWon()) {
+                    return currentPlayer;
+                }
+                if (currentPlayer.getSetsWon() === prevMVP.getSetsWon()) {
+                    if (currentPlayer.getGamesWon() > prevMVP.getGamesWon()) {
+                        return currentPlayer;
+                    }
+                }
+            }
+            return prevMVP;
+        }
+        , undefined);
+
+        mvp?.setIsMVP(true);
+    }
+
+    /**
      * Build the league object with the data from the database
      * @returns Promise<void>
      */
@@ -211,6 +238,7 @@ class NotionRepository implements INotionRepository {
                 this.league?.setDay(day);
             });
         });
+        this.setMVP();
     }
 
     /**
