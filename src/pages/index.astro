@@ -1,15 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Menu from '../components/Menu.tsx';
-import TableSelector from '../components/TableSelector.tsx';
+import PlayersGrid from '../components/PlayersGrid.tsx';
 ---
 
 <Layout title="La Liga Menorca">
 	<main class="main-wrapper">
-		<h1 class="main-title">La Liga Menorca</h1>
-		<p>Elige la opción del menu</p>
-		<Menu client:load />
-		<TableSelector client:visible />
+		<h1 class="text-4xl text-gray-100 pt-8">La Liga Menorca</h1>
+		<p class="text-gray-200">Elige la opción del menu</p>
+		<PlayersGrid client:load />
 	</main>
 </Layout>
 
