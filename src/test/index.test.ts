@@ -218,5 +218,7 @@ describe('Player model tests', () => {
       expect(player.getSetsLost()).toBe(0);
       expect(player).toHaveProperty('gamesWon');
       expect(player.getGamesWon()).toBe(0);
+      expect(player).toHaveProperty('isMVP');
+      expect(player.getIsMVP()).toBe(false);
   });
 });

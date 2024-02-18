@@ -3,6 +3,16 @@ import { IPlayerData } from "./repositories/Repository.ts";
 export type Position = "drive" | "reves";
 
 export interface IPlayer extends IPlayerData {
+    id: string;
+    name: string;
+    position: Position;
+    matchesPlayed: number;
+    matchesWon: number;
+    matchesLost: number;
+    setsWon: number;
+    setsLost: number;
+    gamesWon: number;
+    isMVP: boolean;
     getId: () => string;
     setId: (value: string) => void;
     getName: () => string;
@@ -21,6 +31,8 @@ export interface IPlayer extends IPlayerData {
     incrementSetsLost: () => void;
     getGamesWon: () => number;
     setGamesWon: (games: number) => void;
+    setIsMVP: (value: boolean) => void;
+    getIsMVP: () => boolean;
     toJSON: () => IPlayerData;
 }   
 
@@ -34,6 +46,7 @@ class Player implements IPlayer {
     setsWon: number;
     setsLost: number;
     gamesWon: number;
+    isMVP: boolean;
     
     constructor(id: string, name: string, position: Position) {
         this.id = id;
@@ -45,7 +58,7 @@ class Player implements IPlayer {
         this.setsWon = 0;
         this.setsLost = 0;
         this.gamesWon = 0;
-
+        this.isMVP = false;
     }
 
     getId(): string {
@@ -118,6 +131,14 @@ class Player implements IPlayer {
 
     setGamesWon(games: number) {
         this.gamesWon = this.getGamesWon() + games;
+    }
+
+    setIsMVP(value: boolean) {
+        this.isMVP = value;
+    }
+
+    getIsMVP(): boolean {
+        return this.isMVP;
     }
 
     toJSON = (): IPlayerData => {
