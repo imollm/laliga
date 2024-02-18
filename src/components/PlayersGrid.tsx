@@ -12,7 +12,7 @@ const PlayersGrid = () => {
     }, []);
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:w-[90%] md:w-[80%%] lg:w-[75%] w-[65%]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-10'>
             {
                 playersData?.map((player: IPlayerData) => (
                     PlayerCard({ player })

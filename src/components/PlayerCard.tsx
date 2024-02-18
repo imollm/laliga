@@ -17,7 +17,7 @@ const PlayerCard = ({ player }: { player: IPlayersData }) => {
                 <figure className="m-0 p-0 w-20">
                     <UserIcon />
                 </figure>
-                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white pt-3">
                     {player.name}
                 </h5>
                 <div className="flex flex-col gap-3 text-lg text-gray-500 dark:pt-4">
