@@ -1,5 +1,5 @@
 import React from "react";
-import { IPlayersData } from "../types/index.ts";
+import type { IPlayersData } from "../types/index.ts";
 import UserIcon from "./UserIcon.tsx";
 import mvpIcon from "/src/mvp.png";
 

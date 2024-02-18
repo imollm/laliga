@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { ISet, SetGame } from "./Set.ts";
+import { type ISet, SetGame } from "./Set.ts";
 import Player from "./Player.ts";
 
 export interface ITeam {

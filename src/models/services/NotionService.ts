@@ -1,4 +1,4 @@
-import { IService } from "./Service.js";
+import type { IService } from "./Service.js";
 import { Client as NotionClient } from "@notionhq/client";
 
 /**

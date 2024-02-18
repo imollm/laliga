@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { IMatch } from './Match.ts';
+import type { IMatch } from './Match.ts';
 
 export interface IRound {
     id: string;

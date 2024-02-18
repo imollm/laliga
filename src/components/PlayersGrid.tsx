@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { IPlayerData } from '../models/repositories/Repository.js';
+import type { IPlayerData } from '../models/repositories/Repository.js';
 import useStore from '../store/index.ts';
 import PlayerCard from './PlayerCard.tsx';
 
@@ -7,7 +7,7 @@ const PlayersGrid = () => {
     const { playersData, fetchPlayersData } = useStore();
 
     useEffect(() => {
-        const fetchData = async () => await fetchPlayersData();
+        const fetchData = async () => fetchPlayersData();
         fetchData();
     }, []);
 

@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { IRound } from "./Round.ts";
+import type { IRound } from "./Round.ts";
 
 export interface IDay {
     id: string;

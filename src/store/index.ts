@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { IPlayersData, MenuOption } from "../types/index.js";
-import { IStore } from '../types/index.js';
+import type { IPlayersData, MenuOption } from "../types/index.js";
+import type { IStore } from '../types/index.js';
 
 const useStore = create<IStore>((set: any, get: any) => ({
   optionChoosed: 'players',

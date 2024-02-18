@@ -1,16 +1,16 @@
 import { expect, test, describe, beforeAll } from 'vitest';
 import NotionService from '../models/services/NotionService.ts';
-import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints.js';
-import NotionRepository, { NotionResultArray } from '../models/repositories/NotionRepository.ts';
+import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints.js';
+import NotionRepository, { type NotionResultArray } from '../models/repositories/NotionRepository.ts';
 import * as localNotionDatabse from './db.notion.json';
-import Player, { IPlayer } from '../models/Player.ts';
+import Player, { type IPlayer } from '../models/Player.ts';
 import { League } from '../models/League.ts';
-import { Day, IDay } from '../models/Day.ts';
-import { IRound, Round } from '../models/Round.ts';
-import { IMatch, Match } from '../models/Match.ts';
+import { Day, type IDay } from '../models/Day.ts';
+import { type IRound, Round } from '../models/Round.ts';
+import { type IMatch, Match } from '../models/Match.ts';
 import { Team } from '../models/Team.ts';
-import { ISet, SetGame } from '../models/Set.ts';
-import { IPlayerData } from '../models/repositories/Repository.js';
+import { type ISet, SetGame } from '../models/Set.ts';
+import type { IPlayerData } from '../models/repositories/Repository.js';
 require('dotenv').config();
 
 const notionService = new NotionService();

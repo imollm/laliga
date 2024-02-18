@@ -1,11 +1,11 @@
-import { DatabaseObjectResponse, PageObjectResponse, PartialDatabaseObjectResponse, PartialPageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import Player, { IPlayer, Position } from "../Player.ts";
-import { ILeague, League } from "../League.ts";
+import type { DatabaseObjectResponse, PageObjectResponse, PartialDatabaseObjectResponse, PartialPageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import Player, { type IPlayer, type Position } from "../Player.ts";
+import { type ILeague, League } from "../League.ts";
 import { Day } from "../Day.ts";
 import { Round } from "../Round.ts";
 import { Match } from "../Match.ts";
 import { Team } from "../Team.ts";
-import { IPlayerData, IRepository } from "./Repository.js";
+import type { IPlayerData, IRepository } from "./Repository.js";
 import NotionService from "../services/NotionService.ts";
 
 export type NotionResultArray = Array<PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse>;

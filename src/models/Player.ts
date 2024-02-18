@@ -1,4 +1,4 @@
-import { IPlayerData } from "./repositories/Repository.ts";
+import type { IPlayerData } from "./repositories/Repository.ts";
 
 export type Position = "drive" | "reves";
 

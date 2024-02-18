@@ -1,5 +1,5 @@
-import { IDay } from "./Day.ts";
-import { IPlayer } from "./Player.ts";
+import type { IDay } from "./Day.ts";
+import type { IPlayer } from "./Player.ts";
 
 export interface ILeague {
     name: string;
