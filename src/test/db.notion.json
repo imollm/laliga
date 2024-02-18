@@ -1,0 +1,2015 @@
+{
+    "object": "list",
+    "results": [
+        {
+            "object": "page",
+            "id": "1fd13f9c-9e1d-465f-83ee-02150a2385d3",
+            "created_time": "2024-02-10T20:27:00.000Z",
+            "last_edited_time": "2024-02-13T11:07:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "cd609343-124c-44b0-b4f1-afe497647863",
+                        "name": "Josep Franco",
+                        "color": "green"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "465e0f6d-8915-4dfc-a0ab-d4180ecc43c7",
+                        "name": "FARRAGUT",
+                        "color": "red"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "26f08750-39c5-4858-8da4-423233de7acb",
+                        "name": "Manu Caballo",
+                        "color": "brown"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "3-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "3-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "4-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "4-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 3
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-4",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "12",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "12",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/12-1fd13f9c9e1d465f83ee02150a2385d3",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "18f37e1e-afb8-4334-af87-d2a0ca1c9350",
+            "created_time": "2024-02-10T20:27:00.000Z",
+            "last_edited_time": "2024-02-13T11:06:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "3919776d-09cb-4780-983d-205b97c1aaf4",
+                        "name": "Pedro Bermudez",
+                        "color": "gray"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "465e0f6d-8915-4dfc-a0ab-d4180ecc43c7",
+                        "name": "FARRAGUT",
+                        "color": "red"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "f12c8a07-69cc-46a7-a8a6-2002550bcd44",
+                        "name": "Toni Quintana",
+                        "color": "red"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-4",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-4",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 2
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "4-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "4-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "11",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "11",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/11-18f37e1eafb84334af87d2a0ca1c9350",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "51b43af3-f272-4e14-98d3-30a89cf6695a",
+            "created_time": "2024-02-10T20:27:00.000Z",
+            "last_edited_time": "2024-02-13T11:06:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "f5af1ee7-1667-468c-89de-10322a2d55ca",
+                        "name": "Bia Noseque",
+                        "color": "brown"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "465e0f6d-8915-4dfc-a0ab-d4180ecc43c7",
+                        "name": "FARRAGUT",
+                        "color": "red"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "09058d57-167c-40e5-93ee-3aeefdb99898",
+                        "name": "Marc Pons",
+                        "color": "purple"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-2",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 1
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-1",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "10",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "10",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/10-51b43af3f2724e1498d330a89cf6695a",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "1b5fad13-f5f4-4dcb-ad37-cdb6b03fd019",
+            "created_time": "2024-02-10T20:27:00.000Z",
+            "last_edited_time": "2024-02-13T11:06:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "3919776d-09cb-4780-983d-205b97c1aaf4",
+                        "name": "Pedro Bermudez",
+                        "color": "gray"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "f12c8a07-69cc-46a7-a8a6-2002550bcd44",
+                        "name": "Toni Quintana",
+                        "color": "red"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "0-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "0-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 3
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "3-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "3-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "9",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "9",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/9-1b5fad13f5f44dcbad37cdb6b03fd019",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "2a1355b1-0f42-4d45-9922-ac3b1b7aead5",
+            "created_time": "2024-02-10T20:27:00.000Z",
+            "last_edited_time": "2024-02-13T11:05:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "40b98c30-902b-48f7-8df7-54675e38680d",
+                        "name": "Alex Juan",
+                        "color": "default"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "fff8a56f-54f6-4c06-b307-2f3536a239c7",
+                        "name": "Xavi Barber",
+                        "color": "orange"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-1",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 2
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-0",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-0",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "8",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "8",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/8-2a1355b10f424d459922ac3b1b7aead5",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "32a6553e-2c3a-4da5-b7b6-b3c99fe56468",
+            "created_time": "2024-01-31T21:05:00.000Z",
+            "last_edited_time": "2024-02-13T11:05:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "c153e48f-1b8d-4bfa-91a3-c9b36ba48502",
+                        "name": "Ivan Moll",
+                        "color": "blue"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "fb8c281e-490c-4a0d-80ca-1581288c9482",
+                        "name": "Jornada 2",
+                        "color": "purple"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "5fe9b647-1362-448b-a597-072e85f4dd4e",
+                        "name": "Isaac Saurina",
+                        "color": "green"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-1",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 1
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-1",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "7",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "7",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/7-32a6553e2c3a4da5b7b6b3c99fe56468",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "fff0c692-4dec-402c-a68a-bb52aa3a15c1",
+            "created_time": "2024-01-20T09:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "f5af1ee7-1667-468c-89de-10322a2d55ca",
+                        "name": "Bia Noseque",
+                        "color": "brown"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "5fe9b647-1362-448b-a597-072e85f4dd4e",
+                        "name": "Isaac Saurina",
+                        "color": "green"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-3",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-3",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 3
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-2",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/6-fff0c6924dec402ca68abb52aa3a15c1",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "f7f29d75-9771-46d0-95c4-af9c8a6055ef",
+            "created_time": "2024-01-20T09:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "cd609343-124c-44b0-b4f1-afe497647863",
+                        "name": "Josep Franco",
+                        "color": "green"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "c6310cf0-4143-4b45-b596-3dc07916b0b3",
+                        "name": "Joan Planells",
+                        "color": "pink"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-7",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-7",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 2
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "0-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "0-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "5",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "5",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/5-f7f29d75977146d095c4af9c8a6055ef",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "2bd9b893-e0a1-4ace-a521-ae4879a8fd3e",
+            "created_time": "2024-01-20T09:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "^~[C",
+                        "name": "Ronda 2",
+                        "color": "blue"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "d505a64c-6c25-4779-9941-420af765dbf0",
+                        "name": "Miquel Febrer",
+                        "color": "orange"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "30872e0b-f7e9-417c-955b-a09481e5cdc1",
+                        "name": "SA NITJA",
+                        "color": "pink"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "26f08750-39c5-4858-8da4-423233de7acb",
+                        "name": "Manu Caballo",
+                        "color": "brown"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-4",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 1
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-2",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "4",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/4-2bd9b893e0a14acea521ae4879a8fd3e",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "8a5261fd-3d59-4832-a3ba-5fbaac0a461f",
+            "created_time": "2023-12-12T17:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "f5af1ee7-1667-468c-89de-10322a2d55ca",
+                        "name": "Bia Noseque",
+                        "color": "brown"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "72bfd420-c705-4543-8ea6-3e4bd874a8f8",
+                        "name": "CAMPEONEX",
+                        "color": "green"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "fff8a56f-54f6-4c06-b307-2f3536a239c7",
+                        "name": "Xavi Barber",
+                        "color": "orange"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-2",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 3
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-1",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "3",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "3",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/3-8a5261fd3d594832a3ba5fbaac0a461f",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "17a1bd08-b2a3-4df4-b3c7-8da4c6759ee0",
+            "created_time": "2023-12-12T17:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "3919776d-09cb-4780-983d-205b97c1aaf4",
+                        "name": "Pedro Bermudez",
+                        "color": "gray"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "72bfd420-c705-4543-8ea6-3e4bd874a8f8",
+                        "name": "CAMPEONEX",
+                        "color": "green"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "f12c8a07-69cc-46a7-a8a6-2002550bcd44",
+                        "name": "Toni Quintana",
+                        "color": "red"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-2",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "-",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "-",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 2
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-4",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-4",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "2",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "2",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/2-17a1bd08b2a34df4b3c78da4c6759ee0",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "be78d2b2-92d9-4c0a-b3a6-51b106ce8c0a",
+            "created_time": "2023-12-12T17:04:00.000Z",
+            "last_edited_time": "2024-01-31T22:58:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "c83a384f-f652-4054-91d0-315eb5a2fbd4"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "7738812e-0ba5-4f23-8b1f-2efdaaa2fd86"
+            },
+            "archived": false,
+            "properties": {
+                "Ronda": {
+                    "id": "K%7B%7DC",
+                    "type": "select",
+                    "select": {
+                        "id": "|rD}",
+                        "name": "Ronda 1",
+                        "color": "red"
+                    }
+                },
+                "Jugador reves": {
+                    "id": "SgRV",
+                    "type": "select",
+                    "select": {
+                        "id": "c153e48f-1b8d-4bfa-91a3-c9b36ba48502",
+                        "name": "Ivan Moll",
+                        "color": "blue"
+                    }
+                },
+                "Jornada": {
+                    "id": "XLI%5D",
+                    "type": "select",
+                    "select": {
+                        "id": "b9b2d69e-1968-4d0a-ad0a-f6e76a5633db",
+                        "name": "Jornada 1",
+                        "color": "yellow"
+                    }
+                },
+                "Equipo contrario": {
+                    "id": "efdB",
+                    "type": "select",
+                    "select": {
+                        "id": "72bfd420-c705-4543-8ea6-3e4bd874a8f8",
+                        "name": "CAMPEONEX",
+                        "color": "green"
+                    }
+                },
+                "Jugador drive": {
+                    "id": "jOAH",
+                    "type": "select",
+                    "select": {
+                        "id": "09058d57-167c-40e5-93ee-3aeefdb99898",
+                        "name": "Marc Pons",
+                        "color": "purple"
+                    }
+                },
+                "Set 1": {
+                    "id": "z%3FNB",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6-3",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6-3",
+                            "href": null
+                        }
+                    ]
+                },
+                "Set 3": {
+                    "id": "%7BeKG",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "Partido": {
+                    "id": "%7CCnQ",
+                    "type": "number",
+                    "number": 1
+                },
+                "Set 2": {
+                    "id": "%7CDhh",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "0-6",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "0-6",
+                            "href": null
+                        }
+                    ]
+                },
+                "ID": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/1-be78d2b292d94c0ab3a651b106ce8c0a",
+            "public_url": null
+        }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "developer_survey": "https://notionup.typeform.com/to/bllBsoI4?utm_source=postman",
+    "request_id": "7a35efbd-b8fa-4949-9c99-f5f4ec1e178c"
+}
