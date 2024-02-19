@@ -1,7 +1,6 @@
 import type { IDay } from "./Day.ts";
 import type { IMatch } from "./Match.ts";
 import type { IPlayer } from "./Player.ts";
-import type { IRound } from "./Round.ts";
 
 export interface ILeague {
     name: string;
