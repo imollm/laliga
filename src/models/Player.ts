@@ -161,12 +161,10 @@ class Player implements IPlayer {
             }
         };
 
-        console.log(matches.length);
-
         for (let i = 0; i < players.length; i++) {
             const player = players.at(i) as IPlayer;
             const matchesPlayedWithCurrentColleague = matches.filter((match: IMatch) => {
-                return match.getLocalTeam().getColleague(player)?.getId() === player.id;
+                return match.getLocalTeam().getColleague(this)?.getId() === player.id;
             });
 
             if (matchesPlayedWithCurrentColleague.length === 0) {
@@ -239,21 +237,21 @@ class Player implements IPlayer {
             });
 
             matchStats.matches.matchCount = matchesPlayedWithCurrentColleague.length;
-            matchStats.matches.won.percentage = (matchStats.matches.won.count / matchStats.matches.matchCount) * 100;
+            matchStats.matches.won.percentage = parseFloat(((matchStats.matches.won.count / matchStats.matches.matchCount) * 100).toFixed(2));
             matchStats.matches.won.percentageLabel = `${matchStats.matches.won.percentage.toFixed(2)}%`;
-            matchStats.matches.lost.percentage = (matchStats.matches.lost.count / matchStats.matches.matchCount) * 100;
+            matchStats.matches.lost.percentage = parseFloat(((matchStats.matches.lost.count / matchStats.matches.matchCount) * 100).toFixed(2));
             matchStats.matches.lost.percentageLabel = `${matchStats.matches.lost.percentage.toFixed(2)}%`;
 
             setsStats.sets.matchCount = matchesPlayedWithCurrentColleague.length;
-            setsStats.sets.won.percentage = (setsStats.sets.won.count / setsStats.sets.matchCount) * 100;
+            setsStats.sets.won.percentage = parseFloat(((setsStats.sets.won.count / (setsStats.sets.won.count + setsStats.sets.lost.count)) * 100).toFixed(2));
             setsStats.sets.won.percentageLabel = `${setsStats.sets.won.percentage.toFixed(2)}%`;
-            setsStats.sets.lost.percentage = (setsStats.sets.lost.count / setsStats.sets.matchCount) * 100;
+            setsStats.sets.lost.percentage = parseFloat(((setsStats.sets.lost.count / (setsStats.sets.won.count + setsStats.sets.lost.count)) * 100).toFixed(2));
             setsStats.sets.lost.percentageLabel = `${setsStats.sets.lost.percentage.toFixed(2)}%`;
 
             gamesStats.games.matchCount = matchesPlayedWithCurrentColleague.length;
-            gamesStats.games.won.percentage = (gamesStats.games.won.count / gamesStats.games.matchCount) * 100;
+            gamesStats.games.won.percentage = parseFloat(((gamesStats.games.won.count / (gamesStats.games.won.count + gamesStats.games.lost.count)) * 100).toFixed(2));
             gamesStats.games.won.percentageLabel = `${gamesStats.games.won.percentage.toFixed(2)}%`;
-            gamesStats.games.lost.percentage = (gamesStats.games.lost.count / gamesStats.games.matchCount) * 100;
+            gamesStats.games.lost.percentage = parseFloat(((gamesStats.games.lost.count / (gamesStats.games.won.count + gamesStats.games.lost.count)) * 100).toFixed(2));
             gamesStats.games.lost.percentageLabel = `${gamesStats.games.lost.percentage.toFixed(2)}%`;
 
             playerStats.stats.matches.push(matchStats);
