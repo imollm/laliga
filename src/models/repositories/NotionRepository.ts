@@ -275,6 +275,16 @@ class NotionRepository implements INotionRepository {
             return player.toJSON();
         }) || [] as Array<IPlayerData>;
     }
+    /**
+     * Returns a promise with the league data
+     * @override IRepository.getLeagueData
+     * @returns Promise<ILeagueData>
+     */
+    getLeagueData = async (): Promise<ILeagueData> => {
+        await this.createLeague();
+
+        return this.league?.toJSON();
+    }
 }
 
 export default NotionRepository;

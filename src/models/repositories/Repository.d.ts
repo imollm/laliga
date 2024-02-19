@@ -1,11 +1,19 @@
 import { ILeague } from "../League.ts";
 
 export interface IRepository {
-    league: ILeague | undefined;
+    league: ILeague;
     getClasificationData: () => any;
     getMatchesData: () => any;
     getStatsData: () => any;
     getPlayersData: () => Promise<Array<IPlayerData>>;
+    getLeagueData: () => Promise<ILeagueData>;
+
+export interface ILeagueData {
+    id: string;
+    name: string;
+    description: string;
+    days: Array<IDay>;
+    players: Array<IPlayerData>;
 }
 
 export interface IPlayerData {
