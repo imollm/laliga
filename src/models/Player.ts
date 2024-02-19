@@ -233,7 +233,7 @@ class Player implements IPlayer {
                         localSetGames > rivalSetGames ? setsStats.sets.won.count++ : setsStats.sets.lost.count++;
                     }
 
-                    gamesStats.games.won.count += localSetGames;
+                    gamesStats.games.won.count += localSetGames || 0;
                     gamesStats.games.lost.count += rivalSetGames || 0;
                 });
             });

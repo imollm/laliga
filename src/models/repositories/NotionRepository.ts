@@ -172,6 +172,11 @@ class NotionRepository implements INotionRepository {
                 }
                 const thirdSetResult = (dbRow["Set 3"] as any).rich_text.length > 0 ? (dbRow["Set 3"] as any).rich_text[0].text.content : undefined;
                 const thirdSetResultArray = thirdSetResult?.split('-');
+
+                // This undefined setting is necessary to avoid the case when the third set is not played
+                teamA.setGamesThirdSet(undefined);
+                teamB.setGamesThirdSet(undefined);
+                
                 if (
                     thirdSetResultArray
                     && thirdSetResultArray.length === 2
@@ -187,21 +192,28 @@ class NotionRepository implements INotionRepository {
 
                 let teamASetsWon = 0;
                 let teamBSetsWon = 0;
-                if (teamA.getFirstSet().getGames() > teamB.getFirstSet().getGames()) {
+                const teamAFirstSetGames = teamA.getFirstSet().getGames();
+                const teamBFirstSetGames = teamB.getFirstSet().getGames();
+                const teamASecondSetGames = teamA.getSecondSet().getGames();
+                const teamBSecondSetGames = teamB.getSecondSet().getGames();
+                const teamAThirdSetGames = teamA.getThirdSet().getGames();
+                const teamBThirdSetGames = teamB.getThirdSet().getGames();
+
+                 if (teamAFirstSetGames && teamBFirstSetGames && (teamAFirstSetGames > teamBFirstSetGames)) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                     teamASetsWon++;
-                } else if (teamA.getFirstSet().getGames() < teamB.getFirstSet().getGames()) {
+                } else if (teamAFirstSetGames && teamBFirstSetGames && (teamAFirstSetGames < teamBFirstSetGames)) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
                     teamBSetsWon++;
                 }
 
-                if (teamA.getSecondSet().getGames() > teamB.getSecondSet().getGames()) {
+                if (teamASecondSetGames && teamBSecondSetGames && (teamASecondSetGames > teamBSecondSetGames)) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                     teamASetsWon++;
-                } else if (teamA.getSecondSet().getGames() < teamB.getSecondSet().getGames()) {
+                } else if (teamASecondSetGames && teamBSecondSetGames && (teamASecondSetGames < teamBSecondSetGames)) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
                     teamBSetsWon++;
@@ -209,13 +221,13 @@ class NotionRepository implements INotionRepository {
 
                 if (
                     teamASetsWon < 2
-                    && teamA.getThirdSet().getGames() > teamB.getThirdSet().getGames()
+                    && (teamAThirdSetGames && teamBThirdSetGames && (teamAThirdSetGames > teamBThirdSetGames))
                 ) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                 } else if (
                     teamASetsWon < 2
-                    && teamA.getThirdSet().getGames() < teamB.getThirdSet().getGames()
+                    && (teamAThirdSetGames && teamBThirdSetGames && (teamAThirdSetGames < teamBThirdSetGames))
                 ) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
@@ -231,7 +243,7 @@ class NotionRepository implements INotionRepository {
 
                 this.league?.setPlayer(leftPlayerObject);
                 this.league?.setPlayer(rightPlayerObject);
-
+                
                 match.setLocalTeam(teamA);
                 match.setRivalTeam(teamB);
                 round.setMatch(match);
@@ -275,6 +287,20 @@ class NotionRepository implements INotionRepository {
             return player.toJSON();
         }) || [] as Array<IPlayerData>;
     }
+
+    /**
+     * Returns a promise with the player data
+     * @override IRepository.getPlayerData
+     * @returns Promise<IPlayerData>
+     */
+    getPlayerData = async (id: string): Promise<IPlayerData> => {
+        await this.createLeague();
+
+        const player = this.league?.getPlayer(id) as IPlayer;
+
+        return player?.toJSONWithStats(this.league as ILeague);
+    }
+
     /**
      * Returns a promise with the league data
      * @override IRepository.getLeagueData

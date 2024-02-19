@@ -79,8 +79,8 @@ export class Team implements ITeam {
         this.sets?.[1].setGames(games);
     }
 
-    setGamesThirdSet = (games: number): void => {
-        this.sets?.[2].setGames(games);
+    setGamesThirdSet = (games: number | undefined): void => {
+        this.sets?.[2].setGames(games || undefined);
     }
 
     getColleague = (player: Player): Player => {
