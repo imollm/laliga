@@ -4,27 +4,27 @@ import type { IMatch } from './Match.ts';
 export interface IRound {
     id: string;
     name: string;
-    matches: Array<IMatch>;
+    match: IMatch;
     rival: string;
     getId: () => string;
     getName: () => string;
-    getMatches: () => Array<IMatch>;
-    getMatch: (id: number) => IMatch | undefined;
+    getMatch: () => IMatch;
     setMatch: (match: IMatch) => void;
     getRival: () => string;
     setRival: (rival: string) => void;
+    toJSON: () => any;
 }
 
 export class Round implements IRound {
     id: string;
     name: string;
-    matches: Array<IMatch>;
+    match: IMatch;
     rival: string;
 
     constructor(name: string, rival: string) {
         this.id = randomUUID();
         this.name = name;
-        this.matches = new Array<IMatch>();
+        this.match = {} as IMatch;
         this.rival = rival;
     }
 
@@ -35,17 +35,13 @@ export class Round implements IRound {
     getName = (): string => {
         return this.name;
     }
-    
-    getMatches = (): Array<IMatch> => {
-        return this.matches;
-    }
 
-    getMatch = (id: number): IMatch | undefined => {
-        return this.matches.find(match => match.id === id);
+    getMatch = (): IMatch => {
+        return this.match;
     }
 
     setMatch = (match: IMatch): void => {
-        this.matches.push(match);
+        this.match = match;
     }
 
     getRival = (): string => {
@@ -54,5 +50,14 @@ export class Round implements IRound {
 
     setRival = (rival: string): void => {
         this.rival = rival;
+    }
+
+    toJSON = (): any => {
+        return {
+            id: this.id,
+            name: this.name,
+            match: this.match.toJSON(),
+            rival: this.rival
+        }
     }
 }

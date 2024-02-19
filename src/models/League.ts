@@ -1,5 +1,7 @@
 import type { IDay } from "./Day.ts";
+import type { IMatch } from "./Match.ts";
 import type { IPlayer } from "./Player.ts";
+import type { IRound } from "./Round.ts";
 
 export interface ILeague {
     name: string;
@@ -13,6 +15,8 @@ export interface ILeague {
     getPlayers: () => Array<IPlayer>;
     getPlayer: (id: string) => IPlayer | undefined;
     setPlayer: (player: IPlayer) => void;
+    getMatchesByPlayerId: (id: string) => Array<IMatch>;
+    toJSON: () => any;
   }
 
 export class League implements ILeague {
@@ -58,5 +62,29 @@ export class League implements ILeague {
         }
 
         this.players.push(player);
+    }
+
+    getMatchesByPlayerId = (id: string): Array<IMatch> => {
+        const matchesFound: Array<IMatch> = new Array<IMatch>();
+
+        this.days.forEach((day: IDay) => {
+            const match: IMatch = day.getRound().getMatch();
+            const players: Array<IPlayer> = match.getLocalTeam().getPlayers();
+
+            if (players?.find((player: IPlayer) => player.id === id)) {
+                matchesFound.push(match);
+            }
+        });
+
+        return matchesFound;
+    }
+
+    toJSON = (): any => {
+        return {
+            name: this.name,
+            description: this.description,
+            days: this.days.map((day: IDay) => day.toJSON()),
+            players: this.players.map((player: IPlayer) => player.toJSON())
+        };
     }
 }

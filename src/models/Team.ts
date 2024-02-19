@@ -5,10 +5,11 @@ import Player from "./Player.ts";
 export interface ITeam {
     id: string;
     name: string;
-    players: Array<Player> | undefined;
+    players: Array<Player>;
+    sets: Array<ISet>;
     getId: () => string;
     getName: () => string;
-    getPlayers: () => Array<string>;
+    getPlayers: () => Array<Player>;
     setPlayers: (players: Array<Player>) => void;
     getSets: () => Array<ISet>;
     getFirstSet: () => ISet;
@@ -17,12 +18,14 @@ export interface ITeam {
     setGamesFirstSet: (games: number) => void;
     setGamesSecondSet: (games: number) => void;
     setGamesThirdSet: (games: number) => void;
+    getColleague: (player: Player) => Player;
+    toJSON: () => any;
 }
 
 export class Team implements ITeam {
     id: string;
     name: string;
-    players: Array<Player> | undefined;
+    players: Array<Player>;
     sets: Array<ISet>;
 
     constructor(name: string) {
@@ -44,8 +47,8 @@ export class Team implements ITeam {
         return this.name;
     }
 
-    getPlayers = (): Array<string> => {
-        return this.players?.map(player => player.name) || [];
+    getPlayers = (): Array<Player> => {
+        return this.players || [];
     }
 
     setPlayers = (players: Array<Player>): void => {
@@ -78,5 +81,18 @@ export class Team implements ITeam {
 
     setGamesThirdSet = (games: number): void => {
         this.sets?.[2].setGames(games);
+    }
+
+    getColleague = (player: Player): Player => {
+        return this.players?.find(p => p.id !== player.id) || {} as Player;
+    }
+
+    toJSON = (): any => {
+        return {
+            id: this.id,
+            name: this.name,
+            players: this.players?.map(player => player.toJSON()),
+            sets: this.sets?.map(set => set.toJSON())
+        }
     }
 }

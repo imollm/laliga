@@ -9,6 +9,9 @@ export interface IMatch {
   setLocalTeam: (team: ITeam) => void;
   getRivalTeam: () => ITeam;
   setRivalTeam: (team: ITeam) => void;
+  isItWon: () => boolean;
+  isSetWon: (setNumber: number) => boolean;
+  toJSON: () => any;
 }
 
 export class Match implements IMatch {
@@ -41,4 +44,43 @@ export class Match implements IMatch {
   setRivalTeam = (team: ITeam): void => {
     this.rivalTeam = team;
   };
+
+  isItWon = (): boolean => {
+    let localCount = 0;
+    let rivalCount = 0;
+
+    for (let i = 0; i < 3; i++) {
+      const localSetGames = this.localTeam.getSets().at(i)?.getGames();
+      const rivalSetGames = this.rivalTeam.getSets().at(i)?.getGames();
+
+      if (localSetGames && rivalSetGames && localSetGames > rivalSetGames) {
+        localCount++;
+      } else {
+        rivalCount++;
+      }
+    }
+
+    const isItWon = localCount > rivalCount;
+
+    return isItWon;
+  }
+
+  isSetWon = (setNumber: number): boolean => {
+    const localSetGames = this.localTeam.getSets().at(setNumber)?.getGames();
+    const rivalSetGames = this.rivalTeam.getSets().at(setNumber)?.getGames();
+
+    if (localSetGames && rivalSetGames && localSetGames > rivalSetGames) {
+      return true;
+    }
+
+    return false;
+  }
+
+  toJSON = (): any => {
+    return {
+      id: this.id,
+      localTeam: this.localTeam.toJSON(),
+      rivalTeam: this.rivalTeam.toJSON()
+    }
+  }
 }

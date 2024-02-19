@@ -5,6 +5,7 @@ export interface ISet {
   games: number;
   getGames: () => number;
   setGames: (games: number) => void;
+  toJSON: () => any;
 }
 
 export class SetGame implements ISet {
@@ -22,5 +23,12 @@ export class SetGame implements ISet {
 
   setGames = (games: number): void => {
     this.games = games;
+  };
+
+  toJSON = (): any => {
+    return {
+      id: this.id,
+      games: this.games,
+    };
   };
 }

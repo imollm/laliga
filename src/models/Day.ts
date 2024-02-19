@@ -4,23 +4,23 @@ import type { IRound } from "./Round.ts";
 export interface IDay {
     id: string;
     description: string;
-    rounds: Array<IRound> | undefined;
+    round: IRound;
     getId: () => string;
     getDescription: () => string;
     setRound: (round: IRound) => void;
-    getRound: (id: string) => IRound | undefined;
-    getRounds: () => Array<IRound>;
+    getRound: () => IRound;
+    toJSON: () => any;
 }
 
 export class Day implements IDay {
     id: string;
     description: string;
-    rounds: Array<IRound> | undefined;
+    round: IRound;
 
     constructor(description: string) {
         this.id = randomUUID();
         this.description = description;
-        this.rounds = new Array<IRound>();
+        this.round = {} as IRound;
     }
 
     getId = (): string => {
@@ -32,14 +32,18 @@ export class Day implements IDay {
     }
 
     setRound = (round: IRound): void => {
-        this.rounds?.push(round);
+        this.round = round;
     }
 
-    getRound = (id: string): IRound | undefined => {
-        return this.rounds?.find(round => round.id === id);
+    getRound = (): IRound => {
+        return this.round;
     }
 
-    getRounds = (): Array<IRound> => {
-        return this.rounds || [];
+    toJSON = (): any => {
+        return {
+            id: this.id,
+            description: this.description,
+            round: this.round?.toJSON(),
+        }
     }
 }
