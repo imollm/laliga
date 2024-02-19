@@ -5,7 +5,7 @@ import { Day } from "../Day.ts";
 import { Round } from "../Round.ts";
 import { Match } from "../Match.ts";
 import { Team } from "../Team.ts";
-import type { IPlayerData, IRepository } from "./Repository.js";
+import type { ILeagueData, IPlayerData, IRepository } from "./Repository.js";
 import NotionService from "../services/NotionService.ts";
 
 export type NotionResultArray = Array<PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse>;
@@ -69,6 +69,7 @@ class NotionRepository implements INotionRepository {
 
     /**
      * Set the MVP of the league
+     * @override IRepository.setMVP
      * @returns void
      */
     setMVP = (): void => {
@@ -98,10 +99,9 @@ class NotionRepository implements INotionRepository {
      * Build the league object with the data from the database
      * @returns Promise<void>
      */
-    getLeagueData = async (): Promise<void> => {
-        this.league = new League();
-
+    createLeague = async (): Promise<void> => {
         process.env.NODE_ENV !== 'test' ? await this.queryAllDatabaseRows() : null;
+
         this.orderResultsById();
         this.changeDaysIds();
         this.getAllDifferentDaysNames().forEach(dayName => {
@@ -269,7 +269,7 @@ class NotionRepository implements INotionRepository {
      * @returns Promise<Array<IPlayerData>>
      */
     getPlayersData = async (): Promise<Array<IPlayerData>> => {
-        await this.getLeagueData();
+        await this.createLeague();
 
         return this.league?.getPlayers().map((player: IPlayer) => {
             return player.toJSON();
