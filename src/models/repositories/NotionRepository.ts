@@ -17,9 +17,11 @@ export interface INotionRepository extends IRepository {
 
 class NotionRepository implements INotionRepository {
     results: NotionResultArray = [];
-    league: ILeague | undefined;
+    league: ILeague;
 
-    constructor() {}
+    constructor() {
+        this.league = new League();
+    }
 
     /**
      * Order the results by the id field
@@ -116,11 +118,9 @@ class NotionRepository implements INotionRepository {
                 const roundDescription = (dbRow["Ronda"] as any).select.name;
                 const rivalName = (dbRow["Equipo contrario"] as any).select.name;
                 const round = new Round(roundDescription, rivalName);
-                day.setRound(round);
 
                 const matchId = (dbRow["Partido"] as any).number;
                 const match = new Match(matchId, rivalName);
-                round.setMatch(match);
 
                 const teamA = new Team('Panxes Rotges');
                 const teamB = new Team(rivalName);
@@ -229,12 +229,13 @@ class NotionRepository implements INotionRepository {
                     leftPlayerObject.incrementMatchesLost();
                 }
 
+                this.league?.setPlayer(leftPlayerObject);
+                this.league?.setPlayer(rightPlayerObject);
+
                 match.setLocalTeam(teamA);
                 match.setRivalTeam(teamB);
                 round.setMatch(match);
                 day.setRound(round);
-                this.league?.setPlayer(leftPlayerObject);
-                this.league?.setPlayer(rightPlayerObject);
                 this.league?.setDay(day);
             });
         });
