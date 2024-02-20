@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const { id } = Astro.params;
+import PlayerStats from '../../components/PlayerStats.tsx';
 ---
 <Layout title="La Liga Menorca">
-    <h1>Player: {id}</h1>
+    <PlayerStats client:load id={Astro.params.id} />
 </Layout>
