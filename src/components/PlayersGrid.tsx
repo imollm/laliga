@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import type { IPlayerData } from '../models/repositories/Repository.js';
+import type { IPlayerData } from '../types/index.ts';
 import useStore from '../store/index.ts';
 import PlayerCard from './PlayerCard.tsx';
 

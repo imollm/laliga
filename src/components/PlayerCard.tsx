@@ -1,9 +1,9 @@
 import React from "react";
-import type { IPlayersData } from "../types/index.ts";
 import UserIcon from "./UserIcon.tsx";
 import mvpIcon from "/src/mvp.png";
+import type { IPlayerData } from "../types/index.ts";
 
-const PlayerCard = ({ player }: { player: IPlayersData }) => {
+const PlayerCard = ({ player }: { player: IPlayerData }) => {
     return (
         <a key={player.id} href={`/player/${player.id}`}>
             <div className={`relative w-full rounded-lg shadow bg-gray-800 border-gray-700`}>

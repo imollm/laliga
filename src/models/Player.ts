@@ -1,6 +1,6 @@
 import type { ILeague } from "./League.ts";
 import type { IMatch } from "./Match.ts";
-import type { IPlayerData, IPlayerGameStats, IPlayerMatchStats, IPlayerSetStats, IPlayerStats } from "./repositories/Repository.ts";
+import type { IPlayerData, IPlayerGameStats, IPlayerMatchStats, IPlayerSetStats, IPlayerStats } from "../types/index.ts";
 
 export type Position = "drive" | "reves";
 

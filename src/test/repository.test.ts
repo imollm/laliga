@@ -3,7 +3,7 @@ import NotionRepository, {
   type NotionResultArray,
 } from "../models/repositories/NotionRepository.ts";
 import * as localNotionDatabse from "./db.notion.json";
-import type { IPlayerData } from "../models/repositories/Repository.js";
+import type { IPlayerData } from "../types/index.ts";
 require("dotenv").config();
 
 const notionRepository = new NotionRepository();

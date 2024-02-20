@@ -5,8 +5,9 @@ import { Day } from "../Day.ts";
 import { Round } from "../Round.ts";
 import { Match } from "../Match.ts";
 import { Team } from "../Team.ts";
-import type { ILeagueData, IPlayerData, IRepository } from "./Repository.js";
+import type { IRepository } from "./Repository.js";
 import NotionService from "../services/NotionService.ts";
+import type { ILeagueData, IPlayerData } from "../../types/index.ts";
 
 export type NotionResultArray = Array<PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse>;
 export type NotionResultObject = PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse;
