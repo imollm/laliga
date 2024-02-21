@@ -3,7 +3,7 @@ import useStore from '../store/index.js';
 import UserIcon from './UserIcon.tsx';
 import { capitalize } from '../utils/index.ts';
 import Separator from './Separator.tsx';
-// import MatchesChart from './MatchesChart.tsx';
+import MatchesChart from './MatchesChart.tsx';
 
 interface Props {
     id: string | undefined;
@@ -60,7 +60,7 @@ const PlayerStats = ({ id }: Props) => {
                         </p>
                     </div>
                 </section>
-                {/* <Separator />
+                <Separator />
                 <section className='w-full'>
                     <h2 className='text-2xl font-medium text-white text-center'>
                         Estadísticas
@@ -73,7 +73,7 @@ const PlayerStats = ({ id }: Props) => {
                     <h2 className='text-xl font-medium text-white text-center'>
                         ¿Con quien tengo más química?
                     </h2>
-                </section> */}
+                </section>
             </div>
         </main>
     );
