@@ -1,4 +1,4 @@
-import type { IDay } from "../models/Day.ts";
+import type { IDay } from "@/models/Day.ts";
 
 const MenuOptions = ['players', 'clasification', 'matches', 'stats'] as const;
 

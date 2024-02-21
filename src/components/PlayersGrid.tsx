@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import type { IPlayerData } from '../types/index.ts';
-import useStore from '../store/index.ts';
+import type { IPlayerData } from '@/types/index.ts';
+import useStore from '@/store/index.ts';
 import PlayerCard from './PlayerCard.tsx';
 
 const PlayersGrid = () => {

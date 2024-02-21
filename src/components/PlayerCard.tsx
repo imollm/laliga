@@ -1,8 +1,8 @@
 import React from "react";
 import UserIcon from "./UserIcon.tsx";
 import mvpIcon from "/src/mvp.png";
-import type { IPlayerData } from "../types/index.ts";
-import { capitalize } from "../utils/index.ts";
+import type { IPlayerData } from "@/types/index.ts";
+import { capitalize } from "@/utils/index.ts";
 
 const PlayerCard = ({ player }: { player: IPlayerData }) => {
     return (

@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import NotionRepository from "../models/repositories/NotionRepository.ts";
+import NotionRepository from "@/models/repositories/NotionRepository.ts";
 
 export const GET: APIRoute = async (): Promise<Response> => {
     let leagueData: any = {};

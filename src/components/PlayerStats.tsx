@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import useStore from '../store/index.js';
+import useStore from '@/store/index.js';
 import UserIcon from './UserIcon.tsx';
-import { capitalize } from '../utils/index.ts';
+import { capitalize } from '@/utils/index.ts';
 import Separator from './Separator.tsx';
 import MatchesChart from './MatchesChart.tsx';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import type { IPlayerData } from '../types/index.ts';
+import type { IPlayerData } from '@/types/index.ts';
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import { data } from '../utils/index.ts';
+import { data } from '@/utils/index.ts';
 
 interface Props {
     playerData: IPlayerData;

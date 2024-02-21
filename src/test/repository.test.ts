@@ -1,9 +1,9 @@
 import { expect, test, describe } from "vitest";
 import NotionRepository, {
   type NotionResultArray,
-} from "../models/repositories/NotionRepository.ts";
+} from "@/models/repositories/NotionRepository.ts";
 import * as localNotionDatabse from "./db.notion.json";
-import type { IPlayerData } from "../types/index.ts";
+import type { IPlayerData } from "@/types/index.ts";
 require("dotenv").config();
 
 const notionRepository = new NotionRepository();

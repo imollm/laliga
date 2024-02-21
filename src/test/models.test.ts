@@ -1,11 +1,11 @@
 import { expect, test, describe } from 'vitest';
-import Player, { type IPlayer } from '../models/Player.ts';
-import { League } from '../models/League.ts';
-import { Day, type IDay } from '../models/Day.ts';
-import { Round } from '../models/Round.ts';
-import { Match } from '../models/Match.ts';
-import { Team } from '../models/Team.ts';
-import { type ISet, SetGame } from '../models/Set.ts';
+import Player, { type IPlayer } from '@/models/Player.ts';
+import { League } from '@/models/League.ts';
+import { Day, type IDay } from '@/models/Day.ts';
+import { Round } from '@/models/Round.ts';
+import { Match } from '@/models/Match.ts';
+import { Team } from '@/models/Team.ts';
+import { type ISet, SetGame } from '@/models/Set.ts';
 require('dotenv').config();
 
 describe('League model tests', () => {

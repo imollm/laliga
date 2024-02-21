@@ -1,5 +1,5 @@
-import type { ILeagueData, IPlayerData } from "../../types/index.ts";
-import { ILeague } from "../League.ts";
+import type { ILeagueData, IPlayerData } from "@/types/index.ts";
+import { ILeague } from "@/models/League.ts";
 
 export interface IRepository {
     league: ILeague;

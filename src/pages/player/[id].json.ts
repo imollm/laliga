@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
-import NotionRepository from "../../models/repositories/NotionRepository.js";
-import type { IPlayerData } from "../../types/index.js";
+import NotionRepository from "@/models/repositories/NotionRepository.js";
+import type { IPlayerData } from "@/types/index.js";
 
 export const GET: APIRoute = async ({ params }): Promise<Response> => {
     let playerData: IPlayerData | undefined;

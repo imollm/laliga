@@ -1,13 +1,13 @@
 import type { DatabaseObjectResponse, PageObjectResponse, PartialDatabaseObjectResponse, PartialPageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import Player, { type IPlayer, type Position } from "../Player.ts";
-import { type ILeague, League } from "../League.ts";
-import { Day } from "../Day.ts";
-import { Round } from "../Round.ts";
-import { Match } from "../Match.ts";
-import { Team } from "../Team.ts";
+import Player, { type IPlayer, type Position } from "@/models/Player.ts";
+import { type ILeague, League } from "@/models/League.ts";
+import { Day } from "@/models/Day.ts";
+import { Round } from "@/models/Round.ts";
+import { Match } from "@/models/Match.ts";
+import { Team } from "@/models/Team.ts";
 import type { IRepository } from "./Repository.js";
-import NotionService from "../services/NotionService.ts";
-import type { ILeagueData, IPlayerData } from "../../types/index.ts";
+import NotionService from "@/models/services/NotionService.ts";
+import type { ILeagueData, IPlayerData } from "@/types/index.ts";
 
 export type NotionResultArray = Array<PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse>;
 export type NotionResultObject = PageObjectResponse | PartialPageObjectResponse | PartialDatabaseObjectResponse | DatabaseObjectResponse;

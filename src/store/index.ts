@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { IPlayerData, MenuOption } from "../types/index.js";
+import type { IPlayerData, MenuOption } from "@/types/index.js";
 
 export type IStore = {
   optionChoosed: MenuOption;

@@ -1,5 +1,5 @@
 import { expect, test, describe, beforeAll } from 'vitest';
-import NotionService from '../models/services/NotionService.ts';
+import NotionService from '@/models/services/NotionService.ts';
 import type { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints.js';
 
 require('dotenv').config();

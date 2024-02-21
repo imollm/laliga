@@ -1,6 +1,6 @@
-import type { IDay } from "./Day.ts";
-import type { IMatch } from "./Match.ts";
-import type { IPlayer } from "./Player.ts";
+import type { IDay } from "@/models/Day.ts";
+import type { IMatch } from "@/models/Match.ts";
+import type { IPlayer } from "@/models/Player.ts";
 
 export interface ILeague {
     name: string;

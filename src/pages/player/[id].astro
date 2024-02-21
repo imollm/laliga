@@ -1,6 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PlayerStats from '../../components/PlayerStats.tsx';
+import Layout from '@/layouts/Layout.astro';
+import PlayerStats from '@/components/PlayerStats.tsx';
 ---
 <Layout title="La Liga Menorca">
     <PlayerStats client:load id={Astro.params.id} />

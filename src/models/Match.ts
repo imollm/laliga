@@ -1,4 +1,4 @@
-import { type ITeam, Team } from "./Team.ts";
+import { type ITeam, Team } from "@/models/Team.ts";
 
 export interface IMatch {
   id: number;
