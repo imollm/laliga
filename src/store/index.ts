@@ -1,16 +1,16 @@
 import { create } from "zustand";
-import type { IPlayerData, MenuOption } from "@/types/index.js";
+import type { IPlayerData, IPlayerStats, MenuOption } from "@/types/index.js";
 
 export type IStore = {
   optionChoosed: MenuOption;
   setOptionChoosed: (option: MenuOption) => void;
   playersData: Array<IPlayerData>;
-  fetchPlayersData: () => void;
-  playerData: IPlayerData;
-  fetchPlayerData: (id: string) => void;
+  fetchPlayersData: () => Promise<void>;
+  playerData: IPlayerStats;
+  fetchPlayerData: (id: string) => Promise<void>;
 }
 
-const getPlayerDataFromLocalStorage = (): IPlayerData | undefined => {
+const getPlayerDataFromLocalStorage = (): IPlayerStats | undefined => {
   if (localStorage.getItem('playerData')) {
     return JSON.parse(localStorage.getItem('playerData') as string);
   }
@@ -18,7 +18,7 @@ const getPlayerDataFromLocalStorage = (): IPlayerData | undefined => {
   return undefined;
 }
 
-const setPlayerDataFromLocalStorage = (playerData: IPlayerData): void => {
+const setPlayerDataFromLocalStorage = (playerData: IPlayerStats): void => {
   localStorage.setItem('playerData', JSON.stringify(playerData));
 }
 
@@ -30,7 +30,7 @@ const useStore = create<IStore>((set: any, get: any) => ({
   optionChoosed: 'players',
   setOptionChoosed: (option: MenuOption) => set({ optionChoosed: option }),
   playersData: [] as Array<IPlayerData>,
-  fetchPlayersData: async () => {
+  fetchPlayersData: async (): Promise<void> => {
     if (get().playersData.length === 0) {
       try {
         const data = await fetch('/players.json');
@@ -40,12 +40,12 @@ const useStore = create<IStore>((set: any, get: any) => ({
       }
     }
   },
-  playerData: {} as IPlayerData,
-  fetchPlayerData: async (id: string) => {
+  playerData: {} as IPlayerStats,
+  fetchPlayerData: async (id: string): Promise<void> => {
     if (id !== getPlayerDataFromLocalStorage()?.id) {
       try {
         const data = await fetch(`/player/${id}.json`);
-        const playerData = await data.json();
+        const playerData = await data.json() as IPlayerStats;
 
         removePlayerDataFromLocalStorage();
         setPlayerDataFromLocalStorage(playerData);
@@ -54,7 +54,7 @@ const useStore = create<IStore>((set: any, get: any) => ({
       }
     }
 
-    set({ playerData: getPlayerDataFromLocalStorage() as IPlayerData });
+    set({ playerData: getPlayerDataFromLocalStorage() as IPlayerStats });
   }
 }));
 

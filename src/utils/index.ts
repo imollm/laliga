@@ -1,3 +1,8 @@
+import type {
+  IChartData,
+  IPlayerMatchStats,
+  IPlayerStats,
+} from "@/types/index.ts";
 
 /**
  * Capitalize the first letter of a string
@@ -5,44 +10,51 @@
  * @returns {string} Capitalized string
  */
 export const capitalize = (str: string | undefined): string => {
-    return str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
+  return str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
 };
 
-export const data = [
-    {
-      subject: 'Math',
-      A: 120,
-      B: 110,
-      fullMark: 150,
-    },
-    {
-      subject: 'Chinese',
-      A: 98,
-      B: 130,
-      fullMark: 150,
-    },
-    {
-      subject: 'English',
-      A: 86,
-      B: 130,
-      fullMark: 150,
-    },
-    {
-      subject: 'Geography',
-      A: 99,
-      B: 100,
-      fullMark: 150,
-    },
-    {
-      subject: 'Physics',
-      A: 85,
-      B: 90,
-      fullMark: 150,
-    },
-    {
-      subject: 'History',
-      A: 65,
-      B: 85,
-      fullMark: 150,
-    },
-  ];
+/**
+ * Map player stats to chart data
+ * @param {Object} { playerStats, fill } Player stats and fill the chart
+ * - {IPlayerStats} playerStats.stats Player stats
+ * - {boolean} fill Fill the chart
+ * @returns {IChartData} Chart data
+ */
+export const mapPlayerStats = ({ playerStats, fill = false }: { playerStats: IPlayerStats, fill: boolean }): IChartData => {
+  const labels = playerStats.stats.matches.map(
+    (match: IPlayerMatchStats) => match.colleague.name
+  );
+  const won = playerStats.stats.matches.map(
+    (match: IPlayerMatchStats) => match.matches.won.percentage
+  );
+  const lost = playerStats.stats.matches.map(
+    (match: IPlayerMatchStats) => match.matches.lost.percentage
+  );
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Ganados",
+        data: won,
+        backgroundColor: "rgba(58, 196, 58, 0.2)",
+        borderColor: "#ccc",
+        borderWidth: 1,
+      },
+      {
+        label: "Perdidos",
+        data: lost,
+        backgroundColor: "rgba(222, 47, 47, 0.2)",
+        borderColor: "#ccc",
+        borderWidth: 1,
+      },
+    ],
+  } as IChartData;
+
+    if (fill) {
+        data.datasets[0].fill = true;
+        data.datasets[1].fill = true;
+    }
+
+  return data;
+};

@@ -9,7 +9,7 @@ export interface IMenu {
   name: string;
 }
 
-export interface IPlayerData {
+export type IPlayerData = {
   id: string;
   name: string;
   position: 'reves' | 'drive' | string;
@@ -49,7 +49,7 @@ export type IPlayerGameStats = {
   games: IPLayerStats;
 };
 
-export interface IPlayerStats extends IPlayerData {
+export type IPlayerStats = IPlayerData & {
   stats: {
       matches: Array<IPlayerMatchStats>;
       sets: Array<IPlayerSetStats>;
@@ -64,3 +64,15 @@ export interface ILeagueData {
   days: Array<IDay>;
   players: Array<IPlayerData>;
 }
+
+export type IChartData = {
+  labels: Array<string>;
+  datasets: Array<{
+    fill?: boolean;
+    label: string;
+    data: Array<number>;
+    backgroundColor: string;
+    borderColor: string;
+    borderWidth: number;
+  }>;
+};

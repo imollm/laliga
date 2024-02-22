@@ -3,7 +3,8 @@ import useStore from '@/store/index.js';
 import UserIcon from './UserIcon.tsx';
 import { capitalize } from '@/utils/index.ts';
 import Separator from './Separator.tsx';
-import MatchesChart from './MatchesChart.tsx';
+import AreaChart from './charts/AreaChart.tsx';
+import RadarChart from './charts/RadarChart.tsx';
 
 interface Props {
     id: string | undefined;
@@ -17,7 +18,7 @@ const PlayerStats = ({ id }: Props) => {
             const fetchData = (async () => fetchPlayerData(id));
             fetchData();
         }
-    }, []);
+    }, [playerData]);
 
     return (
         <main className='w-full flex justify-center'>
@@ -33,7 +34,7 @@ const PlayerStats = ({ id }: Props) => {
                         {capitalize(playerData.position)}
                     </p>
                     <Separator />
-                    <div className='grid grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-2 gap-4 mx-auto max-w-xl'>
                         <p className='text-white rounded flex flex-col items-center justify-center ring-white ring-2 h-20 text-xl'>
                             <span className='font-bold'>PJ </span>
                             <span className='text-gray-400'>{playerData.matchesPlayed}</span>
@@ -61,13 +62,52 @@ const PlayerStats = ({ id }: Props) => {
                     </div>
                 </section>
                 <Separator />
-                <section className='w-full'>
+                <section className='w-full mx-auto'>
                     <h2 className='text-2xl font-medium text-white text-center'>
                         Estadísticas
                     </h2>
-                    <MatchesChart playerData={playerData} />
-                    <h3 className='w-full text-left'>Sets</h3>
-                    <h3 className='w-full text-left'>Juegos</h3>
+                    {playerData.stats && (
+                        <div className='flex flex-col justify-center items-center xl:grid grid-cols-2 gap-4'>
+                            {/* MATCH CHART */}
+                            {playerData.stats.matches.filter(({ matches }) => matches.won.count > 0 || matches.lost.count > 0).length < 4 ? (
+                                <AreaChart
+                                    playerStats={playerData}
+                                    title='Partidos'
+                                />
+                            ): (
+                                <RadarChart
+                                    playerStats={playerData}
+                                    title='Partidos'
+                                />
+                            )}
+
+                            {/* SETS CHART */}
+                            {playerData.stats.sets.filter(({ sets }) => sets.won.count > 0 || sets.lost.count).length < 4 ? (
+                                <AreaChart
+                                    playerStats={playerData}
+                                    title='Sets'
+                                />
+                            ): (
+                                <RadarChart
+                                    playerStats={playerData}
+                                    title='Sets'
+                                />
+                            )}
+
+                            {/* GAMES CHART */}
+                            {playerData.stats.games.filter(({ games }) => games.won.count > 0 || games.lost.count > 0).length < 4 ? (
+                                <AreaChart
+                                    playerStats={playerData}
+                                    title='Juegos'
+                                />
+                            ): (
+                                <RadarChart
+                                    playerStats={playerData}
+                                    title='Juegos'
+                                />
+                            )}
+                        </div>
+                    )}
                 </section>
                 <section>
                     <h2 className='text-xl font-medium text-white text-center'>

@@ -167,10 +167,6 @@ class Player implements IPlayer {
                 return match.getLocalTeam().getColleague(this)?.getId() === player.id;
             });
 
-            if (matchesPlayedWithCurrentColleague.length === 0) {
-                continue;
-            }
-
             const colleagueToJson = player.toJSON();
             const matchStats: IPlayerMatchStats = {
                 colleague: colleagueToJson,
@@ -220,6 +216,25 @@ class Player implements IPlayer {
                     matchCount: 0
                 }
             } as IPlayerGameStats;
+
+            if (matchesPlayedWithCurrentColleague.length === 0) {
+                matchStats.matches.won.percentage = 0;
+                matchStats.matches.won.percentageLabel = '0%';
+                matchStats.matches.lost.percentage = 0;
+                matchStats.matches.lost.percentageLabel = '0%';
+                setsStats.sets.won.percentage = 0;
+                setsStats.sets.won.percentageLabel = '0%';
+                setsStats.sets.lost.percentage = 0;
+                setsStats.sets.lost.percentageLabel = '0%';
+                gamesStats.games.won.percentage = 0;
+                gamesStats.games.won.percentageLabel = '0%';
+                gamesStats.games.lost.percentage = 0;
+                gamesStats.games.lost.percentageLabel = '0%';
+                playerStats.stats.matches.push(matchStats);
+                playerStats.stats.sets.push(setsStats);
+                playerStats.stats.games.push(gamesStats);
+                continue;
+            }
 
             matchesPlayedWithCurrentColleague.forEach((match: IMatch) => {
                 match.isItWon() ? matchStats.matches.won.count++ : matchStats.matches.lost.count++;
