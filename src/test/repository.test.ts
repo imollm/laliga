@@ -140,10 +140,10 @@ describe("NotionRepository tests", () => {
         expect(dayOneRoundOneMatchTwo.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayOneRoundOneMatchTwo.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayOneRoundOneMatchTwo.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayOneRoundOneMatchTwo.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundOneMatchTwo.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayOneRoundOneMatchTwo.round.match.rivalTeam?.sets[0].games).toBe(2);
         expect(dayOneRoundOneMatchTwo.round.match.rivalTeam?.sets[1].games).toBe(4);
-        expect(dayOneRoundOneMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundOneMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 1 - Round 1 - Match 3
         const dayOneRoundOneMatchThree = league.days[2];
@@ -160,10 +160,10 @@ describe("NotionRepository tests", () => {
         expect(dayOneRoundOneMatchThree.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayOneRoundOneMatchThree.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayOneRoundOneMatchThree.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayOneRoundOneMatchThree.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundOneMatchThree.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayOneRoundOneMatchThree.round.match.rivalTeam?.sets[0].games).toBe(2);
         expect(dayOneRoundOneMatchThree.round.match.rivalTeam?.sets[1].games).toBe(1);
-        expect(dayOneRoundOneMatchThree.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundOneMatchThree.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 1 - Round 2 - Match 1
         const dayOneRoundTwoMatchOne = league.days[3];
@@ -180,10 +180,10 @@ describe("NotionRepository tests", () => {
         expect(dayOneRoundTwoMatchOne.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayOneRoundTwoMatchOne.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayOneRoundTwoMatchOne.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayOneRoundTwoMatchOne.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchOne.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayOneRoundTwoMatchOne.round.match.rivalTeam?.sets[0].games).toBe(4);
         expect(dayOneRoundTwoMatchOne.round.match.rivalTeam?.sets[1].games).toBe(2);
-        expect(dayOneRoundTwoMatchOne.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchOne.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 1 - Round 2 - Match 2
         const dayOneRoundTwoMatchTwo = league.days[4];
@@ -200,10 +200,10 @@ describe("NotionRepository tests", () => {
         expect(dayOneRoundTwoMatchTwo.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayOneRoundTwoMatchTwo.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayOneRoundTwoMatchTwo.round.match.localTeam?.sets[1].games).toBe(0);
-        expect(dayOneRoundTwoMatchTwo.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchTwo.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayOneRoundTwoMatchTwo.round.match.rivalTeam?.sets[0].games).toBe(7);
         expect(dayOneRoundTwoMatchTwo.round.match.rivalTeam?.sets[1].games).toBe(6);
-        expect(dayOneRoundTwoMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 1 - Round 2 - Match 3
         const dayOneRoundTwoMatchThree = league.days[5];
@@ -220,10 +220,10 @@ describe("NotionRepository tests", () => {
         expect(dayOneRoundTwoMatchThree.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayOneRoundTwoMatchThree.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayOneRoundTwoMatchThree.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayOneRoundTwoMatchThree.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchThree.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayOneRoundTwoMatchThree.round.match.rivalTeam?.sets[0].games).toBe(3);
         expect(dayOneRoundTwoMatchThree.round.match.rivalTeam?.sets[1].games).toBe(2);
-        expect(dayOneRoundTwoMatchThree.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayOneRoundTwoMatchThree.round.match.rivalTeam?.sets[2].games).toBe(undefined);
     });
 
     test("should return the same information for Day 2 as Notion's database", async () => {
@@ -250,10 +250,10 @@ describe("NotionRepository tests", () => {
         expect(dayTwoRoundOneMatchOne.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayTwoRoundOneMatchOne.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayTwoRoundOneMatchOne.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayTwoRoundOneMatchOne.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchOne.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayTwoRoundOneMatchOne.round.match.rivalTeam?.sets[0].games).toBe(1);
         expect(dayTwoRoundOneMatchOne.round.match.rivalTeam?.sets[1].games).toBe(1);
-        expect(dayTwoRoundOneMatchOne.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchOne.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 2 - Round 1 - Match 2
         const dayTwoRoundOneMatchTwo = league.days[7];
@@ -270,10 +270,10 @@ describe("NotionRepository tests", () => {
         expect(dayTwoRoundOneMatchTwo.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayTwoRoundOneMatchTwo.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayTwoRoundOneMatchTwo.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayTwoRoundOneMatchTwo.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchTwo.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayTwoRoundOneMatchTwo.round.match.rivalTeam?.sets[0].games).toBe(1);
         expect(dayTwoRoundOneMatchTwo.round.match.rivalTeam?.sets[1].games).toBe(0);
-        expect(dayTwoRoundOneMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchTwo.round.match.rivalTeam?.sets[2].games).toBe(undefined);
         
         // Day 2 - Round 1 - Match 3
         const dayTwoRoundOneMatchThree = league.days[8];
@@ -290,10 +290,10 @@ describe("NotionRepository tests", () => {
         expect(dayTwoRoundOneMatchThree.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayTwoRoundOneMatchThree.round.match.localTeam?.sets[0].games).toBe(0);
         expect(dayTwoRoundOneMatchThree.round.match.localTeam?.sets[1].games).toBe(3);
-        expect(dayTwoRoundOneMatchThree.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchThree.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayTwoRoundOneMatchThree.round.match.rivalTeam?.sets[0].games).toBe(6);
         expect(dayTwoRoundOneMatchThree.round.match.rivalTeam?.sets[1].games).toBe(6);
-        expect(dayTwoRoundOneMatchThree.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundOneMatchThree.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 2 - Round 2 - Match 1
         const dayTwoRoundTwoMatchOne = league.days[9];
@@ -310,10 +310,10 @@ describe("NotionRepository tests", () => {
         expect(dayTwoRoundTwoMatchOne.round.match.localTeam?.players?.[1]?.position).toBe("drive");
         expect(dayTwoRoundTwoMatchOne.round.match.localTeam?.sets[0].games).toBe(6);
         expect(dayTwoRoundTwoMatchOne.round.match.localTeam?.sets[1].games).toBe(6);
-        expect(dayTwoRoundTwoMatchOne.round.match.localTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundTwoMatchOne.round.match.localTeam?.sets[2].games).toBe(undefined);
         expect(dayTwoRoundTwoMatchOne.round.match.rivalTeam?.sets[0].games).toBe(2);
         expect(dayTwoRoundTwoMatchOne.round.match.rivalTeam?.sets[1].games).toBe(1);
-        expect(dayTwoRoundTwoMatchOne.round.match.rivalTeam?.sets[2].games).toBe(0);
+        expect(dayTwoRoundTwoMatchOne.round.match.rivalTeam?.sets[2].games).toBe(undefined);
 
         // Day 2 - Round 2 - Match 2
         const dayTwoRoundTwoMatchTwo = league.days[10];
