@@ -355,5 +355,31 @@ describe("NotionRepository tests", () => {
         expect(dayTwoRoundTwoMatchThree.round.match.rivalTeam?.sets[1].games).toBe(4);
         expect(dayTwoRoundTwoMatchThree.round.match.rivalTeam?.sets[2].games).toBe(6);
     });
+
+    test("should return the correct information for a player Ivan Moll for Day 1 and Day 2", async () => {
+      const notionRepository = new NotionRepository(); // Recreate the instance to reset all values
+        notionRepository.results = localNotionDatabse.default.results as NotionResultArray;
+
+        const league = await notionRepository.getLeagueData();
+        const playerIvanMoll = league.players.find((player: IPlayerData) => player.name === "Ivan Moll");
+
+        expect(typeof playerIvanMoll).toBe('object');
+        expect(playerIvanMoll).toHaveProperty('name');
+        expect(playerIvanMoll?.name).toBe('Ivan Moll');
+        expect(playerIvanMoll).toHaveProperty('position');
+        expect(playerIvanMoll?.position).toBe('reves');
+        expect(playerIvanMoll).toHaveProperty('matchesPlayed');
+        expect(playerIvanMoll?.matchesPlayed).toBe(2);
+        expect(playerIvanMoll).toHaveProperty('matchesWon');
+        expect(playerIvanMoll?.matchesWon).toBe(1);
+        expect(playerIvanMoll).toHaveProperty('matchesLost');
+        expect(playerIvanMoll?.matchesLost).toBe(1);
+        expect(playerIvanMoll).toHaveProperty('setsWon');
+        expect(playerIvanMoll?.setsWon).toBe(3);
+        expect(playerIvanMoll).toHaveProperty('setsLost');
+        expect(playerIvanMoll?.setsLost).toBe(2);
+        expect(playerIvanMoll).toHaveProperty('gamesWon');
+        expect(playerIvanMoll?.gamesWon).toBe(19);
+    });
   });
 });

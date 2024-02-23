@@ -200,21 +200,21 @@ class NotionRepository implements INotionRepository {
                 const teamAThirdSetGames = teamA.getThirdSet().getGames();
                 const teamBThirdSetGames = teamB.getThirdSet().getGames();
 
-                 if (teamAFirstSetGames && teamBFirstSetGames && (teamAFirstSetGames > teamBFirstSetGames)) {
+                 if (teamAFirstSetGames !== undefined && teamBFirstSetGames !== undefined && (teamAFirstSetGames > teamBFirstSetGames)) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                     teamASetsWon++;
-                } else if (teamAFirstSetGames && teamBFirstSetGames && (teamAFirstSetGames < teamBFirstSetGames)) {
+                } else if (teamAFirstSetGames !== undefined && teamBFirstSetGames !== undefined && (teamAFirstSetGames < teamBFirstSetGames)) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
                     teamBSetsWon++;
                 }
 
-                if (teamASecondSetGames && teamBSecondSetGames && (teamASecondSetGames > teamBSecondSetGames)) {
+                if (teamASecondSetGames !== undefined && teamBSecondSetGames !== undefined && (teamASecondSetGames > teamBSecondSetGames)) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                     teamASetsWon++;
-                } else if (teamASecondSetGames && teamBSecondSetGames && (teamASecondSetGames < teamBSecondSetGames)) {
+                } else if (teamASecondSetGames !== undefined && teamBSecondSetGames !== undefined && (teamASecondSetGames < teamBSecondSetGames)) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
                     teamBSetsWon++;
@@ -222,13 +222,13 @@ class NotionRepository implements INotionRepository {
 
                 if (
                     teamASetsWon < 2
-                    && (teamAThirdSetGames && teamBThirdSetGames && (teamAThirdSetGames > teamBThirdSetGames))
+                    && (teamAThirdSetGames !== undefined && teamBThirdSetGames !== undefined && (teamAThirdSetGames > teamBThirdSetGames))
                 ) {
                     rightPlayerObject.incrementSetsWon();
                     leftPlayerObject.incrementSetsWon();
                 } else if (
                     teamASetsWon < 2
-                    && (teamAThirdSetGames && teamBThirdSetGames && (teamAThirdSetGames < teamBThirdSetGames))
+                    && (teamAThirdSetGames !== undefined && teamBThirdSetGames !== undefined && (teamAThirdSetGames < teamBThirdSetGames))
                 ) {
                     rightPlayerObject.incrementSetsLost();
                     leftPlayerObject.incrementSetsLost();
