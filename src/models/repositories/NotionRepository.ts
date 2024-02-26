@@ -97,6 +97,48 @@ class NotionRepository implements INotionRepository {
     }
 
     /**
+     * Check if the player already exists in the league by name,
+     * and then return the current players of the current match
+     * 
+     * @param {Record<string, any>} dbRow - The database row object
+     * @returns {Object} - The left and right player objects
+     */
+    handlePlayers = (dbRow: Record<string, any>): {leftPlayerObject: IPlayer, rightPlayerObject: IPlayer} => {
+        const bothPositions = 'Drive/Reves' as Position;
+        const leftPlayerPosition = 'Reves' as Position;
+        const rightPlayerPosition = 'Drive' as Position;
+
+        const leftPlayerName = (dbRow["Jugador reves"] as any).select.name;
+        const leftPlayerId = (dbRow["Jugador reves"] as any).select.id;
+        const rightPlayerName = (dbRow["Jugador drive"] as any).select.name;
+        const rightPlayerId = (dbRow["Jugador drive"] as any).select.id;
+
+        let leftPlayerObject = this.league?.getPlayerByName(leftPlayerName);
+        let rightPlayerObject = this.league?.getPlayerByName(rightPlayerName);
+
+        if (leftPlayerObject && leftPlayerObject.getPosition() === rightPlayerPosition) {
+            leftPlayerObject.setPosition(bothPositions);
+        }
+
+        if (rightPlayerObject && rightPlayerObject.getPosition() === leftPlayerPosition) {
+            rightPlayerObject.setPosition(bothPositions);
+        }
+
+        if (!leftPlayerObject) {
+            leftPlayerObject = new Player(leftPlayerId, leftPlayerName, leftPlayerPosition);
+        }
+
+        if (!rightPlayerObject) {
+            rightPlayerObject = new Player(rightPlayerId, rightPlayerName, rightPlayerPosition);
+        }
+
+        return {
+            leftPlayerObject,
+            rightPlayerObject
+        }
+    }
+
+    /**
      * Build the league object with the data from the database
      * @returns Promise<void>
      */
@@ -126,16 +168,9 @@ class NotionRepository implements INotionRepository {
                 const teamA = new Team('Panxes Rotges');
                 const teamB = new Team(rivalName);
 
-                const leftPlayerName = (dbRow["Jugador reves"] as any).select.name;
-                const leftPlayerId = (dbRow["Jugador reves"] as any).select.id;
-                const leftPlayerPosition = 'reves' as Position;
-                const leftPlayerObject = this.league?.getPlayer(leftPlayerId) ?? new Player(leftPlayerId, leftPlayerName, leftPlayerPosition);
+                const { rightPlayerObject, leftPlayerObject } = this.handlePlayers(dbRow);
+
                 leftPlayerObject.incrementMatchesPlayed();
-                
-                const rightPlayerName = (dbRow["Jugador drive"] as any).select.name;
-                const rightPlayerId = (dbRow["Jugador drive"] as any).select.id;
-                const rightPlayerPosition = 'drive' as Position;
-                const rightPlayerObject = this.league?.getPlayer(rightPlayerId) ?? new Player(rightPlayerId, rightPlayerName, rightPlayerPosition);
                 rightPlayerObject.incrementMatchesPlayed();
 
                 teamA.setPlayers([leftPlayerObject as Player, rightPlayerObject as Player]);

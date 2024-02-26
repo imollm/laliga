@@ -14,6 +14,7 @@ export interface ILeague {
     getPlayers: () => Array<IPlayer>;
     getPlayer: (id: string) => IPlayer | undefined;
     setPlayer: (player: IPlayer) => void;
+    getPlayerByName: (name: string) => IPlayer | undefined;
     getMatchesByPlayerId: (id: string) => Array<IMatch>;
     toJSON: () => any;
   }
@@ -61,6 +62,10 @@ export class League implements ILeague {
         }
 
         this.players.push(player);
+    }
+
+    getPlayerByName = (name: string): IPlayer | undefined => {
+        return this.players.find((player: IPlayer) => player.name.toLowerCase() === name.toLowerCase());
     }
 
     getMatchesByPlayerId = (id: string): Array<IMatch> => {

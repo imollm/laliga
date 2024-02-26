@@ -2,7 +2,7 @@ import type { ILeague } from "@/models/League.ts";
 import type { IMatch } from "@/models/Match.ts";
 import type { IPlayerData, IPlayerGameStats, IPlayerMatchStats, IPlayerSetStats, IPlayerStats } from "@/types/index.ts";
 
-export type Position = "drive" | "reves";
+export type Position = "Drive" | "Reves" | "Drive/Reves";
 
 export interface IPlayer extends IPlayerData {
     id: string;

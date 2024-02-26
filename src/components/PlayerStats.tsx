@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import useStore from '@/store/index.js';
 import UserIcon from './UserIcon.tsx';
-import { capitalize } from '@/utils/index.ts';
 import Separator from './Separator.tsx';
 import AreaChart from './charts/AreaChart.tsx';
 import RadarChart from './charts/RadarChart.tsx';
@@ -31,7 +30,7 @@ const PlayerStats = ({ id }: Props) => {
                         {playerData.name}
                     </h1>
                     <p className='text-white text-center pt-1'>
-                        {capitalize(playerData.position)}
+                        {playerData.position}
                     </p>
                     <Separator />
                     <div className='grid grid-cols-2 gap-4 mx-auto max-w-xl'>

@@ -2,7 +2,6 @@ import React from "react";
 import UserIcon from "./UserIcon.tsx";
 import mvpIcon from "/src/mvp.png";
 import type { IPlayerData } from "@/types/index.ts";
-import { capitalize } from "@/utils/index.ts";
 
 const PlayerCard = ({ player }: { player: IPlayerData }) => {
     return (
@@ -25,7 +24,7 @@ const PlayerCard = ({ player }: { player: IPlayerData }) => {
                     <div className="flex flex-col gap-3 text-lg text-gray-500 pt-4">
                         <div className="text-white">
                             <span className="font-bold">Posición </span>
-                            <span className='text-gray-400'>{capitalize(player.position)}</span>
+                            <span className='text-gray-400'>{player.position}</span>
                         </div>
                         <div className="flex flex-row gap-5 justify-between">
                             <div className="text-white">
