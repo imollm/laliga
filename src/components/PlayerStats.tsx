@@ -4,6 +4,7 @@ import UserIcon from './UserIcon.tsx';
 import Separator from './Separator.tsx';
 import AreaChart from './charts/AreaChart.tsx';
 import RadarChart from './charts/RadarChart.tsx';
+import GoBackIcon from './GoBack.tsx';
 
 interface Props {
     id: string | undefined;
@@ -22,9 +23,14 @@ const PlayerStats = ({ id }: Props) => {
     return (
         <main className='w-full flex justify-center'>
             <div className='w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] flex flex-col justify-center items-center'>
-                <figure className="m-0 p-0 pt-8 w-36">
-                    <UserIcon />
-                </figure>
+                <div className='w-full flex flex-col justify-center'>
+                    <GoBackIcon />
+                    <div className='w-full flex justify-center'>
+                        <figure className="m-0 p-0 pt-8 w-36">
+                            <UserIcon />
+                        </figure>
+                    </div>
+                </div>
                 <section className='w-full'>
                     <h1 className='text-3xl font-medium text-white pt-3 text-center'>
                         {playerData.name}
