@@ -95,7 +95,7 @@ describe('Set model tests', () => {
 
 describe('Player model tests', () => {
   test('should create a new instance of Player', async () => {
-      const player = new Player('1', 'John Doe', 'reves');
+      const player = new Player('1', 'John Doe', 'Reves');
       expect(player).toBeInstanceOf(Player);
       expect(player).toHaveProperty('id');
       expect(typeof player.getId()).toBe('string');
