@@ -55,7 +55,7 @@ export class Match implements IMatch {
 
       if (localSetGames && rivalSetGames && localSetGames > rivalSetGames) {
         localCount++;
-      } else {
+      } else if (localSetGames && rivalSetGames && localSetGames < rivalSetGames) {
         rivalCount++;
       }
     }
